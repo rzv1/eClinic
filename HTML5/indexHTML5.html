@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>My page!</title>
+</head>
+<body>
+    <div>
+        <p><b>Sunteti logat</b> cu username <input type="text" value="ID-2412" readonly></p>
+        <span><img width=150 src="Gemini_Generated_Image_s4z303s4z303s4z3.png" alt="ceva"></span>
+        <br><br>
+    </div>
+
+    <table height="400" border="3">
+        <form action="indexHTML5.html" target="_blank">
+            <caption><h3>Finalizare comandă</h3></caption>
+            <tr bgcolor="#5f9ea0">
+                <th colspan="2">Secțiunea 1</th>
+            </tr>
+            <tr>
+                <th>
+                    Date personale
+                </th>
+                <th>
+                    Modalitate plată
+                </th>
+            </tr>
+            <tr>
+                <td style="width: 60%">
+                    <table>
+                        <tr>
+                            <th><label for="nume">Nume</label></th>
+                            <td><input type="text" maxlength="25" id="nume" name="nume"></td>
+                        </tr>
+                        <tr>
+                            <th>Prenume</th>
+                            <td><input type="text" maxlength="25" name="prenume"></td>
+                        </tr>
+                        <tr>
+                            <th>E-mail</th>
+                            <td><input type="text" maxlength="50" name="email" size="25"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><input type="radio" name="metoda_plata" value="card"></td>
+                            <td><label>Plată cu cardul</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="metoda_plata" value="ramburs" checked></td>
+                            <td><label>Plată ramburs</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="metoda_plata" value="transfer" disabled></td>
+                            <td><label>Plată prin transfer</label></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr bgcolor="#ff7f50">
+                <th>Adresă</th>
+                <th>Preferințe curier</th>
+            </tr>
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <th><label>Strada</label></th>
+                            <td colspan="2"><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <th><label>Numar</label></th>
+                            <td><input type="number" max="1000" min="1" step="1" size="4"></td>
+                            <td>(1-1000)</td>
+                        </tr>
+                        <tr>
+                            <th>Localitate</th>
+                            <td colspan="2"><input type="text"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td align="center">
+                    <select multiple>
+                        <option>FanCourier</option>
+                        <option>SameDay</option>
+                        <option>Cargus</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+
+            </tr>
+            <tr>
+                <td colspan="2" align="right"><a href="indexHTML5.html">
+                    <button>Finalizare</button>
+                </a></td>
+            </tr>
+        </form>
+    </table>
+    <p align="center"><br><strong>Footer</strong><br></p>
+    <table width="100%" border="1" align="center">
+        <tr align="left">
+            <th>Company</th>
+            <th>Services</th>
+            <th colspan="2">Contacts</th>
+        </tr>
+        <tr>
+            <td>
+                <ol start="3">
+                    <li>Projects</li>
+                    <li>Blog
+                        <ol type="I">
+                            <li>Upwork</li>
+                            <li>Dribble</li>
+                            <li>Clutch</li>
+                        </ol></li>
+                </ol>
+            </td>
+            <td>
+                <ol type="A" start="2">
+                    <li>Web dev
+                        <ol type="i">
+                            <li>Landing Page</li>
+                            <li>CMS Development</li>
+                            <li>Saas website</li>
+                        </ol>
+                    </li>
+                    <li>Responsive Web</li>
+                </ol>
+            </td>
+            <td rowspan="2" valign="top">
+                <ul>
+                    <li>+38 096 272 2100</li>
+                    <li>Ukraine, Odessa</li>
+                    <li>65058</li>
+                </ul>
+            </td>
+        </tr>
+        <tr align="center">
+            <td>
+                Open Source
+            </td>
+            <td>
+                Software Dev
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

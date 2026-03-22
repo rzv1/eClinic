@@ -1,0 +1,49 @@
+@import "common.css";
+#main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 220px;
+}
+
+#main-menu li {
+    margin-bottom: 8px;
+}
+
+.page-content {
+    margin: 20px;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+}
+
+input,
+textarea,
+select,
+button {
+    padding: 8px;
+    border: 1px solid var(--border);
+}
+
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background: var(--primary-dark);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.card {
+    flex: 1 1 220px;
+    padding: 16px;
+    border: 1px solid var(--border);
+    background: #f8fbff;
+}

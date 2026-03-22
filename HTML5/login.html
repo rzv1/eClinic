@@ -2,21 +2,39 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style-horizontal.css">
     <title>Log In e-Clinic</title>
 </head>
 <body>
-    <img src="resources/Gemini_Generated_Image_s4z303s4z303s4z3.png" width="100" alt="logo">
+    <header id="topbar">
+        <div class="brand">
+            <a href="login.html">
+                <img src="resources/logo.png" alt="logo e-Clinic" width="90">
+            </a>
+            <h1>e-Clinic</h1>
+        </div>
+
+        <nav id="main-menu">
+            <ul>
+                <li><a href="indexHTML5.html">Înregistrare</a></li>
+                <li><a href="login.html">Log in</a></li>
+                <li><a href="services.html">Servicii</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="page-content">
     <h2>Bine ai revenit!</h2>
     <p>Conectează-te la contul tău pentru a accesa serviciile.</p>
     <form action="login.php" target="_blank">
         <table>
             <tr>
                 <th><label for="user">Utilizator</label></th>
-                <td><input id="user" type="text" placeholder="utilizator"></td>
+                <td><input id="user" type="text" ></td>
             </tr>
             <tr>
                 <th><label for="pass">Parola</label></th>
-                <td><input id="pass" type="text" placeholder="parola"></td>
+                <td><input id="pass" type="text" ></td>
             </tr>
             <tr>
                 <td colspan="2"><button type="submit">Autentificare</button></td>
@@ -29,6 +47,7 @@
             </tr>
         </table>
     </form>
+    </div>
     <table id="footer">
         <tr>
             <td>

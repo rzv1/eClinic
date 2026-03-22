@@ -1,0 +1,143 @@
+@import "common.css";
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#main-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+#main-menu li a::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../resources/OIP.png");
+    background-repeat: no-repeat;
+    background-size: 96px 96px;
+}
+
+#main-menu li:nth-child(1) a::before { background-position: 0 0; }
+#main-menu li:nth-child(1) a:hover::before { background-position: 0 -24px; }
+#main-menu li:nth-child(2) a::before { background-position: -24px 0; }
+#main-menu li:nth-child(2) a:hover::before { background-position: 0 -48px; }
+#main-menu li:nth-child(3) a::before { background-position: -48px 0; }
+#main-menu li:nth-child(3) a:hover::before { background-position: 0 -72px; }
+#main-menu li:nth-child(4) a::before { background-position: -72px 0; }
+#main-menu li:nth-child(4) a:hover::before { background-position: -72px -48px; }
+
+.page-content {
+    max-width: 1200px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.card {
+    flex: 1 1 220px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #f7f4ff;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid var(--border);
+    padding: 10px;
+    text-align: left;
+}
+
+input,
+textarea,
+select,
+button {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background: var(--primary-dark);
+}
+
+@media screen and (max-width: 900px) {
+    #topbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .brand {
+        justify-content: center;
+    }
+
+    #main-menu ul {
+        justify-content: center;
+    }
+
+    .page-content {
+        margin: 16px;
+        padding: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #main-menu ul {
+        flex-direction: column;
+    }
+
+    #main-menu li a {
+        display: block;
+        width: 100%;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    table,
+    tr,
+    td,
+    th {
+        font-size: 14px;
+    }
+}

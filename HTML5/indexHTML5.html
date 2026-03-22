@@ -2,207 +2,227 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style-vertical.css">
     <title>My page!</title>
 </head>
 <body>
-    <div>
-        <p><label for="ID"><b>Sunteti logat</b> cu username </label> <input id="ID" type="text" value="ID-2412" readonly></p>
-        <span><a href="login.html"><img width="150" src="resources/Gemini_Generated_Image_s4z303s4z303s4z3.png" alt="ceva"></a></span>
-        <br><br>
-    </div>
-    <form action="indexHTML5.html" target="_blank">
-    <table>
-            <caption><h3>Înregistrare clinică</h3></caption>
-            <tr>
-                <th colspan="2">Pasul1: Detalii clinică</th>
-            </tr>
-            <tr>
-                <td id="adresaClinica">
+    <header id="topbar">
+        <div class="brand">
+            <a href="login.html">
+                <img src="resources/logo.png" alt="logo e-Clinic" width="90">
+            </a>
+            <h1>e-Clinic</h1>
+        </div>
+
+        <nav id="main-menu">
+            <ul>
+                <li><a href="indexHTML5.html">Înregistrare</a></li>
+                <li><a href="login.html">Log in</a></li>
+                <li><a href="services.html">Servicii</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="page-content">
+        <div>
+            <p><label for="ID"><b>Sunteti logat</b> cu username </label> <input id="ID" type="text" value="ID-2412" readonly></p>
+            <span><a href="login.html"><img width="150" src="resources/logo.png" alt="ceva"></a></span>
+            <br><br>
+        </div>
+        <form action="indexHTML5.html" target="_blank">
+        <table>
+                <caption><h3>Înregistrare clinică</h3></caption>
+                <tr>
+                    <th colspan="2">Pasul1: Detalii clinică</th>
+                </tr>
+                <tr>
+                    <td id="adresaClinica">
+                        <fieldset>
+                            <legend>Adresa clinica</legend>
+                            <table>
+                                <tr>
+                                    <th><label for="street">Strada</label></th>
+                                    <td colspan="2"><input id="street" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="number">Numar</label></th>
+                                    <td><input id="number" type="number" max="1000" min="1" step="1"></td>
+                                    <td>(1-1000)</td>
+                                </tr>
+                                <tr>
+                                    <th><label for="city">Localitate</label></th>
+                                    <td colspan="2"><input id="city" type="text"></td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </td>
+                    <td id="tipClinica">
+                        <fieldset>
+                            <legend>Forma juridică</legend>
+                            <table>
+                                <tr>
+                                    <td><input id="radioBox1" type="radio" name="metoda_plata" value="card"></td>
+                                    <td><label for="radioBox1">SRL</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input id="radioBox2" type="radio" name="metoda_plata" value="ramburs" checked></td>
+                                    <td><label for="radioBox2">CMI</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input id="radioBox3" type="radio" name="metoda_plata" value="transfer" disabled></td>
+                                    <td><label for="radioBox3">SA</label></td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">Pasul2: Informații administrator</th>
+                </tr>
+                <tr>
+                    <td id="datePersonale">
                     <fieldset>
-                        <legend>Adresa clinica</legend>
+                        <legend>Date personale</legend>
                         <table>
                             <tr>
-                                <th><label for="street">Strada</label></th>
-                                <td colspan="2"><input id="street" type="text"></td>
+                                <th><label for="nume">Nume</label></th>
+                                <td><input id="nume" type="text" maxlength="25" name="nume"></td>
                             </tr>
                             <tr>
-                                <th><label for="number">Numar</label></th>
-                                <td><input id="number" type="number" max="1000" min="1" step="1"></td>
-                                <td>(1-1000)</td>
+                                <th><label for="prenume">Prenume</label></th>
+                                <td><input id="prenume" type="text" maxlength="25" name="prenume"></td>
                             </tr>
                             <tr>
-                                <th><label for="city">Localitate</label></th>
-                                <td colspan="2"><input id="city" type="text"></td>
+                                <th><label for="telefon">Telefon</label></th>
+                                <td><input id="telefon" type="text" maxlength="50" name="email" size="25"></td>
                             </tr>
                         </table>
                     </fieldset>
                 </td>
-                <td id="tipClinica">
-                    <fieldset>
-                        <legend>Forma juridică</legend>
-                        <table>
-                            <tr>
-                                <td><input id="radioBox1" type="radio" name="metoda_plata" value="card"></td>
-                                <td><label for="radioBox1">SRL</label></td>
-                            </tr>
-                            <tr>
-                                <td><input id="radioBox2" type="radio" name="metoda_plata" value="ramburs" checked></td>
-                                <td><label for="radioBox2">CMI</label></td>
-                            </tr>
-                            <tr>
-                                <td><input id="radioBox3" type="radio" name="metoda_plata" value="transfer" disabled></td>
-                                <td><label for="radioBox3">SA</label></td>
-                            </tr>
-                        </table>
-                    </fieldset>
-                </td>
-            </tr>
-            <tr>
-                <th colspan="2">Pasul2: Informații administrator</th>
-            </tr>
-            <tr>
-                <td id="datePersonale">
-                <fieldset>
-                    <legend>Date personale</legend>
-                    <table>
-                        <tr>
-                            <th><label for="nume">Nume</label></th>
-                            <td><input id="nume" type="text" maxlength="25" name="nume"></td>
-                        </tr>
-                        <tr>
-                            <th><label for="prenume">Prenume</label></th>
-                            <td><input id="prenume" type="text" maxlength="25" name="prenume"></td>
-                        </tr>
-                        <tr>
-                            <th><label for="telefon">Telefon</label></th>
-                            <td><input id="telefon" type="text" maxlength="50" name="email" size="25"></td>
-                        </tr>
-                    </table>
-                </fieldset>
-            </td>
-                
-                
-                <td id="dateClinica">
-                    <fieldset>
-                        <legend>Date clinica</legend>
-                        <table>
-                            <tr>
-                                <th>
-                                    <label for="numeEntitate">Nume entitate</label>
-                                </th>
-                                <td>
-                                    <input id="numeEntitate" type="text">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <label for="cui">CUI/CIF</label>
-                                </th>
-                                <td>
-                                    <input id="cui" type="text">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <label for="email">E-mail</label>
-                                </th>
-                                <td>
-                                    <input id="email" type="text">
-                                </td>
-                            </tr>
-                        </table>
-                    </fieldset>
-                </td>
-            </tr>
-            <tr>
-                <th colspan="2">Pasul3: Specializări și servicii</th>
-            </tr>
-            <tr>
-                <td id="servicii">
-                    <input id="cardiologie" type="checkbox"><label for="cardiologie">Cardiologie</label>
-                    <input id="dermatologie" type="checkbox"><label for="dermatologie">Dermatologie</label>
-                    <input id="stomatologie" type="checkbox"><label for="stomatologie">Stomatologie</label>
-                    <input id="pediatrie" type="checkbox"><label for="pediatrie">Pediatrie</label>
-                    <input id="altele" type="checkbox"><label for="altele">Altele</label>
-                </td>
-                <td>
-                    <label for="alteleTextArea">Precizari suplimentare</label>
-                    <textarea id="alteleTextArea" name="precizari" rows="3" cols="20"></textarea>
-                </td>
-            </tr>
+
+
+                    <td id="dateClinica">
+                        <fieldset>
+                            <legend>Date clinica</legend>
+                            <table>
+                                <tr>
+                                    <th>
+                                        <label for="numeEntitate">Nume entitate</label>
+                                    </th>
+                                    <td>
+                                        <input id="numeEntitate" type="text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label for="cui">CUI/CIF</label>
+                                    </th>
+                                    <td>
+                                        <input id="cui" type="text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label for="email">E-mail</label>
+                                    </th>
+                                    <td>
+                                        <input id="email" type="text">
+                                    </td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">Pasul3: Specializări și servicii</th>
+                </tr>
+                <tr>
+                    <td id="servicii">
+                        <input id="cardiologie" type="checkbox"><label for="cardiologie">Cardiologie</label>
+                        <input id="dermatologie" type="checkbox"><label for="dermatologie">Dermatologie</label>
+                        <input id="stomatologie" type="checkbox"><label for="stomatologie">Stomatologie</label>
+                        <input id="pediatrie" type="checkbox"><label for="pediatrie">Pediatrie</label>
+                        <input id="altele" type="checkbox"><label for="altele">Altele</label>
+                    </td>
+                    <td>
+                        <label for="alteleTextArea">Precizari suplimentare</label>
+                        <textarea id="alteleTextArea" name="precizari" rows="3" cols="20"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend>
+
+                        <label for="regimTelemedicina">Regim de lucru:</label></legend><br>
+                        <select id="regimTelemedicina" name="regim_lucru" multiple>
+                            <option value="standard">Program Standard (08-20)</option>
+                            <option value="nonstop">Non-stop (Garda 24h)</option>
+                            <option value="video">Telemedicina Disponibila</option>
+                            <option value="weekend">Doar Weekend & Sarbatori</option>
+                        </select></fieldset>
+                    </td>
+                    <td>
+                        <button>Finalizare</button>
+                    </td>
+                </tr>
+        </table>
+        </form>
+        <p><br><strong>Footer</strong><br></p>
+        <table id="footer">
             <tr>
                 <td>
-                    <fieldset>
-                        <legend>
-                    
-                    <label for="regimTelemedicina">Regim de lucru:</label></legend><br>
-                    <select id="regimTelemedicina" name="regim_lucru" multiple>
-                        <option value="standard">Program Standard (08-20)</option>
-                        <option value="nonstop">Non-stop (Garda 24h)</option>
-                        <option value="video">Telemedicina Disponibila</option>
-                        <option value="weekend">Doar Weekend & Sarbatori</option>
-                    </select></fieldset>
+                    <b>Administrație</b>
+                    <ol start="3" type="i">
+                        <li>Despre Noi</li>
+                        <li>Locații
+                            <ul>
+                                <li>Centrul Universitar</li>
+                                <li>Clinica de Vest</li>
+                            </ul>
+                        </li>
+                    </ol>
                 </td>
+
                 <td>
-                    <button>Finalizare</button>
+                    <b>Servicii Medicale</b>
+                    <ul>
+                        <li>Telemedicină</li>
+                        <li>Specialități
+                            <ol start="2" type="A">
+                                <li>Cardiologie</li>
+                                <li>Neurologie</li>
+                                <li>Pediatrie</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </td>
+
+                <td>
+                    <b>Suport Pacienți</b>
+                    <ul>
+                        <li>Întrebări Frecvente</li>
+                        <li>Ghid Programări</li>
+                        <li>Contact Urgent</li>
+                    </ul>
+                </td>
+
+                <td>
+                    <b>Legal</b>
+                    <ul>
+                        <li>Protecția Datelor (GDPR)</li>
+                        <li>Drepturile Pacientului</li>
+                        <li>ANPC</li>
+                    </ul>
                 </td>
             </tr>
-    </table>
-    </form>
-    <p><br><strong>Footer</strong><br></p>
-    <table id="footer">
-        <tr>
-            <td>
-                <b>Administrație</b>
-                <ol start="3" type="i">
-                    <li>Despre Noi</li>
-                    <li>Locații
-                        <ul>
-                            <li>Centrul Universitar</li>
-                            <li>Clinica de Vest</li>
-                        </ul>
-                    </li>
-                </ol>
-            </td>
-
-            <td>
-                <b>Servicii Medicale</b>
-                <ul>
-                    <li>Telemedicină</li>
-                    <li>Specialități
-                        <ol start="2" type="A">
-                            <li>Cardiologie</li>
-                            <li>Neurologie</li>
-                            <li>Pediatrie</li>
-                        </ol>
-                    </li>
-                </ul>
-            </td>
-
-            <td>
-                <b>Suport Pacienți</b>
-                <ul>
-                    <li>Întrebări Frecvente</li>
-                    <li>Ghid Programări</li>
-                    <li>Contact Urgent</li>
-                </ul>
-            </td>
-
-            <td>
-                <b>Legal</b>
-                <ul>
-                    <li>Protecția Datelor (GDPR)</li>
-                    <li>Drepturile Pacientului</li>
-                    <li>ANPC</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="4">
-                <hr>
-                <small>&copy; 2026 e-Clinic. Toate drepturile rezervate.</small>
-            </td>
-        </tr>
-    </table>
+            <tr>
+                <td colspan="4">
+                    <hr>
+                    <small>&copy; 2026 e-Clinic. Toate drepturile rezervate.</small>
+                </td>
+            </tr>
+        </table>
+    </main>
 </body>
 </html>

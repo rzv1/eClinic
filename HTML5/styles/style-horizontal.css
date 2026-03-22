@@ -1,0 +1,101 @@
+@import "common.css";
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#main-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.page-content {
+    max-width: 600px;
+    margin: 24px auto;
+    padding: 24px;
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+form table,
+#footer {
+    width: 100%;
+    margin-top: 36px;
+    background: var(--surface);
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+fieldset {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px;
+    background: #fafcff;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+
+input,
+textarea,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(31, 111, 178, 0.15);
+}
+
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    animation: pulse 1.8s infinite;
+}
+
+button:hover {
+    background: var(--primary-dark);
+}
+
+#servicii label {
+    margin-right: 14px;
+}
+
+#footer td {
+    border-top: 1px solid var(--border);
+}
+
+h1::after {
+    content: " • portal medical";
+    font-size: 0.6em;
+    color: #6b7c93;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
